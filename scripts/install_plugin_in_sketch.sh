@@ -1,11 +1,11 @@
 #!/bin/bash
 
-PLUGIN_NAME="${PLUGIN_NAME:-DummyPlugin.sketchplugin}"
+PLUGIN_NAME="${PLUGIN_NAME:-DummyPlugin}"
 SKETCH_PLUGINS_PATH="${SKETCH_PLUGINS_PATH:-/tmp}"
 
 echo "✅ Installing ${PLUGIN_NAME} to ${SKETCH_PLUGINS_PATH}"
 
-PLUGIN_CONTENTS_PATH="${SKETCH_PLUGINS_PATH}/${PLUGIN_NAME}/Contents"
+PLUGIN_CONTENTS_PATH="${SKETCH_PLUGINS_PATH}/${PLUGIN_NAME}.sketchplugin/Contents"
 
 mkdir -p "${PLUGIN_CONTENTS_PATH}"/{Sketch,Resources}
 

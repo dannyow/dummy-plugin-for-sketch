@@ -10,4 +10,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 PLUGIN_NAME=DummyPlugin
-SKETCH_PLUGINS_PATH=/tmp
+SKETCH_PLUGINS_PATH=${HOME}/Library/Application Support/com.bohemiancoding.sketch3/Plugins
+
+DISTRIBUTION_DIR=${SRCROOT}/dist

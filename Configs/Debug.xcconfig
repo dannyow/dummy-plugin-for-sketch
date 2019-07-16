@@ -10,4 +10,3 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 #include "Common.xcconfig"
 
-SKETCH_PLUGINS_PATH=${HOME}/Library/Application Support/com.bohemiancoding.sketch3/Plugins

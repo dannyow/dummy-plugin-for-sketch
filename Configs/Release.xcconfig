@@ -10,3 +10,9 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 #include "Common.xcconfig"
 
+// Map of all signing identities, entries are separated by a semicolon.
+// Every entry is a pair of zip file suffix (like -apple-dev) and signing identity name (like Apple Development)
+CODESIGNING_IDENTITES_MAP=-apple-dev:Apple Development;-apple-dist:Apple Distribution;-devid:Developer ID Application
+
+// If only one identity is expected to be in play just use it (suffix will be skipped)
+//CODESIGNING_IDENTITES_MAP=Apple Development
