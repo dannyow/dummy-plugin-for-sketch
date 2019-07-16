@@ -1,0 +1,44 @@
+{
+    "name": "DummyPlugin",
+    "description": "Testing framework codesigning",
+    "identifier": "me.buffered.DummySketchPlugin",
+    "version": "1.0.0",
+    "appcast": "https://github.com/",
+    "author": "@dannyow",
+    "homepage": "https://getcontext.app/",
+    "authorEmail": "daniel@buffered.me",
+    "compatibleVersion": 3,
+    "bundleVersion": 1,
+    "commands": [
+        {
+            "name": "Handle Actions",
+            "identifier": "handle-actions",
+            "script": "plugin.js",
+            "handlers": {
+                "actions": {
+                    "Startup": "onStartup",
+                    "Shutdown": "onShutdown",
+                    "SelectionChanged.finish": "onSelectionChanged"
+                }
+            }
+        },
+       
+        {
+            "name": "Ping...",
+            "identifier": "send-ping",
+            "script": "plugin.js",
+            "handler": "sendPing"
+        }
+    ],
+    "menu": {
+        "isRoot": 1,
+        "items": [
+            {
+                "title": "Dummy Plugin",
+                "items": [
+                    "send-ping"
+                ]
+            }
+        ]
+    }
+}

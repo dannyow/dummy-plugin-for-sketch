@@ -1,0 +1,13 @@
+//
+//  Common.xcconfig
+//  DummyPlugin
+//
+//  Created by Daniel on 16/07/2019.
+//  Copyright © 2019 Daniel. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PLUGIN_NAME=DummyPlugin
+SKETCH_PLUGINS_PATH=/tmp

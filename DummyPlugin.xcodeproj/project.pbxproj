@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		65E6F4E122DDD9F1004946FA /* DummyPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E6F4DF22DDD9F1004946FA /* DummyPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E6F4E922DDDA1E004946FA /* DummyPluginController.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E6F4E722DDDA1E004946FA /* DummyPluginController.h */; };
+		65E6F4EA22DDDA1E004946FA /* DummyPluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E6F4E822DDDA1E004946FA /* DummyPluginController.m */; };
+		65E6F4EC22DDDAA1004946FA /* Plugin in Resources */ = {isa = PBXBuildFile; fileRef = 65E6F4EB22DDDAA1004946FA /* Plugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6537D39422DDE3D1009A6EBD /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		6537D39622DDE45F009A6EBD /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		6537D39722DDE46E009A6EBD /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		65E6F4DC22DDD9F1004946FA /* DummyPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DummyPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E6F4DF22DDD9F1004946FA /* DummyPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DummyPlugin.h; sourceTree = "<group>"; };
 		65E6F4E022DDD9F1004946FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E6F4E722DDDA1E004946FA /* DummyPluginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DummyPluginController.h; sourceTree = "<group>"; };
+		65E6F4E822DDDA1E004946FA /* DummyPluginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DummyPluginController.m; sourceTree = "<group>"; };
+		65E6F4EB22DDDAA1004946FA /* Plugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Plugin; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,10 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6537D39322DDE3B3009A6EBD /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				6537D39422DDE3D1009A6EBD /* Common.xcconfig */,
+				6537D39622DDE45F009A6EBD /* Debug.xcconfig */,
+				6537D39722DDE46E009A6EBD /* Release.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		65E6F4D222DDD9F1004946FA = {
 			isa = PBXGroup;
 			children = (
 				65E6F4DE22DDD9F1004946FA /* DummyPlugin */,
+				6537D39322DDE3B3009A6EBD /* Configs */,
+				65E6F4EB22DDDAA1004946FA /* Plugin */,
 				65E6F4DD22DDD9F1004946FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				65E6F4DF22DDD9F1004946FA /* DummyPlugin.h */,
+				65E6F4E722DDDA1E004946FA /* DummyPluginController.h */,
+				65E6F4E822DDDA1E004946FA /* DummyPluginController.m */,
 				65E6F4E022DDD9F1004946FA /* Info.plist */,
 			);
 			path = DummyPlugin;
@@ -59,6 +82,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E6F4E922DDDA1E004946FA /* DummyPluginController.h in Headers */,
 				65E6F4E122DDD9F1004946FA /* DummyPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +98,7 @@
 				65E6F4D822DDD9F1004946FA /* Sources */,
 				65E6F4D922DDD9F1004946FA /* Frameworks */,
 				65E6F4DA22DDD9F1004946FA /* Resources */,
+				65E6F4ED22DDE18D004946FA /* Install Plugin in Sketch */,
 			);
 			buildRules = (
 			);
@@ -121,16 +146,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E6F4EC22DDDAA1004946FA /* Plugin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65E6F4ED22DDE18D004946FA /* Install Plugin in Sketch */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install Plugin in Sketch";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/scripts/install_plugin_in_sketch.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65E6F4D822DDD9F1004946FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E6F4EA22DDDA1E004946FA /* DummyPluginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +187,7 @@
 /* Begin XCBuildConfiguration section */
 		65E6F4E222DDD9F1004946FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6537D39622DDE45F009A6EBD /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -200,6 +249,7 @@
 		};
 		65E6F4E322DDD9F1004946FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6537D39722DDE46E009A6EBD /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -269,7 +319,8 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.buffered.DummyPlugin;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.buffered.DummySketchPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 			};
@@ -292,7 +343,8 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.buffered.DummyPlugin;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.buffered.DummySketchPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 			};
